@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List JS</title>
+    <style>
+      input:focus {
+        box-shadow: none !important;
+        border-color: #000 !important;
+      }
+      .todo {
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+        background-color: #eaeaea;
+        padding: 10px 10px 10px 20px;
+        border-left: 5px solid red;
+      }
+      .completed {
+        text-decoration: line-through;
+        color: green;
+        border-left: 5px solid green;
+      }
+      .completed .todo-item {
+        text-decoration: line-through;
+      }
+      .complete-btn {
+        margin-right: 5px;
+      }
+      .todo-list {
+        margin-top: 20px;
+      }
+      .bi-check-lg,
+      .bi-trash3-fill {
+        pointer-events: none;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <section class="vh-100" style="background-color: #eee">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-md-6">
+            <div class="card rounded-3">
+              <div class="card-body p-4">
+                <h4 class="text-center my-3 pb-3">To do list</h4>
+                <form
+                  class="class"
+                  ="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2"
+                >
+                  <div class="input-group">
+                    <input type="text" class="todo-input form-control" />
+                    <button class="todo-button btn btn-dark" type="submit">
+                      Add to do
+                    </button>
+                  </div>
+                </form>
+                <div class="todo-container">
+                  <div class="todo-list"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>
